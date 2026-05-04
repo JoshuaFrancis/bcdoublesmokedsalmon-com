@@ -368,3 +368,12 @@ h1{
   .range__media img{min-height:320px}
   main{gap:3.3rem}
 }
+
+/* ─── FAQ ──────────────────────────────────────────────────────── */
+.faq { padding: clamp(4rem, 7vw, 6rem) var(--pad); border-bottom: 1px solid var(--rule); }
+.faq__inner { max-width: var(--max); margin: 0 auto; }
+.faq__title { font-family: var(--ff-serif); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; margin-bottom: 2.5rem; color: var(--white); }
+.faq__list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--rule); }
+.faq__item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+.faq__q { font-family: var(--ff-serif); font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: .5rem; }
+.faq__a { font-size: .9rem; line-height: 1.75; color: var(--ash); }
