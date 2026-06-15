@@ -512,3 +512,70 @@ p{ margin:0; }
 .faq__item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
 .faq__q { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: .5rem; }
 .faq__a { font-size: .9rem; line-height: 1.75; color: var(--ink-soft); }
+
+/* --- Mobile overflow hardening --- */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  overscroll-behavior-x: none;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+main,
+section,
+header,
+footer,
+nav,
+form,
+fieldset,
+[class*="__inner"],
+[class*="__grid"],
+[class*="__row"],
+[class*="__cols"],
+[class*="__card"],
+[class*="__item"] {
+  min-width: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
+  min-width: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+span {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .btn,
+  .btn-primary,
+  .btn-ghost,
+  [class*="btn"],
+  [class*="button"] {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
